@@ -30,9 +30,6 @@ Test the system by pasting an email to classify and mask PII:
 "Hi, my name is Satyam Kumar. My email is Satyam@example.com. My Aadhar number is 123456789012, my phone number is 9876543210, DOB is 2002-06-07. My card is 4111-1111-1111-1111, CVV 123, expiry 07/27.
 Expected Output
 Masked Email:
-text
-Copy
-Edit
 Hi, my name is [full_name]. My email is [email]. My Aadhar number is [aadhar_num], my phone number is [phone_number], DOB is [dob]. My card number is [credit_debit_no], CVV [cvv_no], expiry [expiry_no].
 Extracted Entities:
 ffull_name: Satyam Kumar
@@ -47,13 +44,9 @@ Predicted Category:
 Request
 🌐 Deployment Links
 GitHub: https://github.com/Satyam0775/email-classification-project
-
 Hugging Face: https://huggingface.co/spaces/Satyam0077/email-classifier-satyma
 
 📝 File Structure
-text
-Copy
-Edit
 email-classification-project/
 ├── gradio_app.py          # Launches the Gradio UI
 ├── api.py                 # FastAPI server with /predict/ endpoint
@@ -71,17 +64,12 @@ Once your FastAPI server is running, you can use Postman to send a POST request 
 1. Open Postman.
 2. Set the request method to POST.
 3. Enter the following URL:
-text
-Copy
-Edit
 http://127.0.0.1:8000/predict/
 4. In the Body tab, choose raw and set the type to JSON.
 5. Enter the input data in JSON format:
 json
-Copy
-Edit
 {
-  "email_content": "Hi, my name is Rahul Sharma. My email is rahul@example.com. My Aadhar number is 123456789012, my phone number is 9876543210, DOB is 1995-06-25. My card number is 4111-1111-1111-1111, CVV 123, expiry 07/27."
+  "email_body": "Hi, my name is Satyam Kumar. My email is Satyam@example.com. My Aadhar number is 123456789012, my phone number is 9876543210, DOB is 2002-06-07. My card is 4111-1111-1111-1111, CVV 123, expiry 07/27."
 }
 6. Click Send.
 The response will contain the masked email content and extracted entities, as shown in the expected output section.
