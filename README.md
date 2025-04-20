@@ -7,6 +7,8 @@ This project classifies support emails into predefined categories (e.g., Billing
 - **TF-IDF + Naive Bayes classifier** for email categorization
 - **FastAPI & Gradio interfaces** for local deployment
 - **Deployed on Hugging Face Spaces**
+- 🌐 Deployment Links
+Hugging Face: [https://huggingface.co/spaces/Satyam0077/email-classifier-satymanoe](https://huggingface.co/spaces/Satyam0077/email-classifier-satyma)
 
 ## 🔧 Setup Instructions
 
