@@ -12,7 +12,7 @@ This project classifies support emails into predefined categories (like Billing,
 
 1. **Clone the repository and install dependencies**  
    ```bash
-   git clone https://github.com/YourUsername/email-classification-project.git
+   git clone https://github.com/Satyam0775/email-classification-project.git
    cd email-classification-project
    pip install -r requirements.txt
 Run the Gradio interface locally
