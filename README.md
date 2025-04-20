@@ -19,16 +19,16 @@ pip install -r requirements.txt
 ### 2. Run the Gradio Interface Locally:
 ```bash
 python gradio_app.py
+
 3. (Optional) Run the FastAPI Server:
-bash
-Copy
-Edit
 uvicorn api:app --reload
 This will start a FastAPI server, and the /predict/ endpoint will be available at http://127.0.0.1:8000/predict/.
+
 🧪 Example Input
 Test the system by pasting an email to classify and mask PII:
 "Hi, my name is Satyam Kumar. My email is Satyam@example.com. My Aadhar number is 123456789012, my phone number is 9876543210, DOB is 2002-06-07. My card is 4111-1111-1111-1111, CVV 123, expiry 07/27.
 Expected Output
+
 Masked Email:
 Hi, my name is [full_name]. My email is [email]. My Aadhar number is [aadhar_num], my phone number is [phone_number], DOB is [dob]. My card number is [credit_debit_no], CVV [cvv_no], expiry [expiry_no].
 Extracted Entities:
@@ -43,8 +43,8 @@ expiry_no: 07/27
 Predicted Category:
 Request
 
-##🌐Deployment Links
-Hugging Face: [https://huggingface.co/spaces/Satyam0077/email-classifier-satyma](https://huggingface.co/spaces/Satyam0077/email-classifier-satyma)
+## 🚀 Live App
+Check out the live app here: [(https://huggingface.co/spaces/Satyam0077/MultiAgentWorkflowAI](https://huggingface.co/spaces/Satyam0077/email-classifier-satyma)]
 
 📝 File Structure
 email-classification-project/
