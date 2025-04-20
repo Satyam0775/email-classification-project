@@ -45,10 +45,6 @@ expiry_no: 07/27
 Predicted Category:
 Request
 
-## 🚀 Live App
-Check out the live app here: [(https://huggingface.co/spaces/Satyam0077/MultiAgentWorkflowAI](https://huggingface.co/spaces/Satyam0077/email-classifier-satyma)]
-
-📝 File Structure
 email-classification-project/
 ├── gradio_app.py          # Launches the Gradio UI
 ├── api.py                 # FastAPI server with /predict/ endpoint
@@ -60,7 +56,7 @@ email-classification-project/
 │   └── classifier_model.pkl
 ├── notebooks/
 │   └── training_pipeline.ipynb
-📦 API Usage with Postman
+
 Once your FastAPI server is running, you can use Postman to send a POST request to the /predict/ endpoint to classify emails and mask PII.
 
 1. Open Postman.
