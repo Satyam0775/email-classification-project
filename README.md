@@ -27,11 +27,7 @@ uvicorn api:app --reload
 This will start a FastAPI server, and the /predict/ endpoint will be available at http://127.0.0.1:8000/predict/.
 🧪 Example Input
 Test the system by pasting an email to classify and mask PII:
-
-text
-Copy
-Edit
-Hi, my name is Rahul Sharma. My email is rahul@example.com. My Aadhar number is 123456789012, my phone number is 9876543210, DOB is 1995-06-25. My card number is 4111-1111-1111-1111, CVV 123, expiry 07/27.
+"Hi, my name is Satyam Kumar. My email is Satyam@example.com. My Aadhar number is 123456789012, my phone number is 9876543210, DOB is 2002-06-07. My card is 4111-1111-1111-1111, CVV 123, expiry 07/27.
 Expected Output
 Masked Email:
 text
@@ -39,21 +35,15 @@ Copy
 Edit
 Hi, my name is [full_name]. My email is [email]. My Aadhar number is [aadhar_num], my phone number is [phone_number], DOB is [dob]. My card number is [credit_debit_no], CVV [cvv_no], expiry [expiry_no].
 Extracted Entities:
-yaml
-Copy
-Edit
-full_name: Rahul Sharma
-email: rahul@example.com
-aadhar_num: 123456789012
+ffull_name: Satyam Kumar
+email: Satyam@example.com
 phone_number: 9876543210
-dob: 1995-06-25
+dob: 2002-06-07
+aadhar_num: 123456789012
 credit_debit_no: 4111-1111-1111-1111
 cvv_no: 123
 expiry_no: 07/27
 Predicted Category:
-text
-Copy
-Edit
 Request
 🌐 Deployment Links
 GitHub: https://github.com/Satyam0775/email-classification-project
