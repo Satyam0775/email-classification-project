@@ -42,9 +42,9 @@ cvv_no: 123
 expiry_no: 07/27
 Predicted Category:
 Request
-🌐 Deployment Links
-GitHub: https://github.com/Satyam0775/email-classification-project
-Hugging Face: https://huggingface.co/spaces/Satyam0077/email-classifier-satyma
+
+##🌐Deployment Links
+Hugging Face: [https://huggingface.co/spaces/Satyam0077/email-classifier-satyma](https://huggingface.co/spaces/Satyam0077/email-classifier-satyma)
 
 📝 File Structure
 email-classification-project/
