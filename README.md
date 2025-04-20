@@ -1,38 +1,32 @@
 # Email Classifier with PII Masking
 
-This project classifies support emails into predefined categories (like Billing, Request, Technical) while masking personal information (PII) such as names, emails, phone numbers, Aadhar, card info, etc.
+This project classifies support emails into predefined categories (e.g., Billing, Request, Technical) while masking personal information (PII) like names, emails, phone numbers, Aadhar, and card details.
 
 ## 🚀 Features
-- Regex-based PII masking (no LLMs used)
-- TF-IDF + Naive Bayes classifier
-- FastAPI & Gradio interfaces
-- Deployed on Hugging Face Spaces
+- **Regex-based PII masking** (no LLMs used)
+- **TF-IDF + Naive Bayes classifier** for email categorization
+- **FastAPI & Gradio interfaces** for local deployment
+- **Deployed on Hugging Face Spaces**
 
 ## 🔧 Setup Instructions
 
-1. **Clone the repository and install dependencies**  
-   ```bash
-   git clone https://github.com/Satyam0775/email-classification-project.git
-   cd email-classification-project
-   pip install -r requirements.txt
-Run the Gradio interface locally
+### 1. Clone the repository and install dependencies:
+```bash
+git clone https://github.com/Satyam0775/email-classification-project.git
+cd email-classification-project
+pip install -r requirements.txt
 
-bash
-Copy
-Edit
+### 2. Run the Gradio Interface Locally:
+```bash
 python gradio_app.py
-Open your browser at http://127.0.0.1:7860.
-
-(Optional) Run the FastAPI server
-
+3. (Optional) Run the FastAPI Server:
 bash
 Copy
 Edit
 uvicorn api:app --reload
-The /predict/ endpoint will be available at http://127.0.0.1:8000/predict/.
-
+This will start a FastAPI server, and the /predict/ endpoint will be available at http://127.0.0.1:8000/predict/.
 🧪 Example Input
-Paste an email to test the system:
+Test the system by pasting an email to classify and mask PII:
 
 text
 Copy
@@ -40,13 +34,11 @@ Edit
 Hi, my name is Rahul Sharma. My email is rahul@example.com. My Aadhar number is 123456789012, my phone number is 9876543210, DOB is 1995-06-25. My card number is 4111-1111-1111-1111, CVV 123, expiry 07/27.
 Expected Output
 Masked Email:
-
 text
 Copy
 Edit
 Hi, my name is [full_name]. My email is [email]. My Aadhar number is [aadhar_num], my phone number is [phone_number], DOB is [dob]. My card number is [credit_debit_no], CVV [cvv_no], expiry [expiry_no].
 Extracted Entities:
-
 yaml
 Copy
 Edit
@@ -59,15 +51,19 @@ credit_debit_no: 4111-1111-1111-1111
 cvv_no: 123
 expiry_no: 07/27
 Predicted Category:
-
 text
 Copy
 Edit
 Request
 🌐 Deployment Links
-Hugging Face: [https://huggingface.co/spaces/Satyam0077/email-classifier-satyma](https://huggingface.co/spaces/Satyam0077/email-classifier-satyma)
+GitHub: https://github.com/Satyam0775/email-classification-project
+
+Hugging Face: https://huggingface.co/spaces/Satyam0077/email-classifier-satyma
 
 📝 File Structure
+text
+Copy
+Edit
 email-classification-project/
 ├── gradio_app.py          # Launches the Gradio UI
 ├── api.py                 # FastAPI server with /predict/ endpoint
@@ -79,3 +75,24 @@ email-classification-project/
 │   └── classifier_model.pkl
 ├── notebooks/
 │   └── training_pipeline.ipynb
+📦 API Usage with Postman
+Once your FastAPI server is running, you can use Postman to send a POST request to the /predict/ endpoint to classify emails and mask PII.
+
+1. Open Postman.
+2. Set the request method to POST.
+3. Enter the following URL:
+text
+Copy
+Edit
+http://127.0.0.1:8000/predict/
+4. In the Body tab, choose raw and set the type to JSON.
+5. Enter the input data in JSON format:
+json
+Copy
+Edit
+{
+  "email_content": "Hi, my name is Rahul Sharma. My email is rahul@example.com. My Aadhar number is 123456789012, my phone number is 9876543210, DOB is 1995-06-25. My card number is 4111-1111-1111-1111, CVV 123, expiry 07/27."
+}
+6. Click Send.
+The response will contain the masked email content and extracted entities, as shown in the expected output section.
+
