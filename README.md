@@ -1,5 +1,5 @@
 # Email Classifier with PII Masking
-📄 [Download Final Report (PDF)]([email_classification_final_report.pdf](https://drive.google.com/file/d/1pUFWLscHESbswE5KzwUvSmT03TjUGNQG/view?usp=sharing))
+📄 [Download Final Report (PDF)](https://drive.google.com/file/d/1pUFWLscHESbswE5KzwUvSmT03TjUGNQG/view?usp=sharing)
 
 
 This project classifies support emails into predefined categories (e.g., Billing, Request, Technical) while masking personal information (PII) like names, emails, phone numbers, Aadhar, and card details.
